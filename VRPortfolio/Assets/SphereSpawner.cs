@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class SphereSpawner : MonoBehaviour
 {
-
     [SerializeField]
-    SpawnedObject cube;
+    SpawnedObject sphere;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +15,9 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         // Key inputs for spawning will be detected here
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            GameObject.Instantiate(cube);
+        if (Input.GetKeyDown(KeyCode.S)) {
+            GameObject.Instantiate(sphere);
         } 
-
     }
 }
