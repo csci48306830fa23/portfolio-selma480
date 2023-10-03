@@ -6,7 +6,7 @@ public class Canon : MonoBehaviour
 {
     public Transform rayOrigin;
     public GameObject cannonball;
-    float velocity = 10f;
+    public float velocity = 15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +24,9 @@ public class Canon : MonoBehaviour
             var ball = Instantiate(cannonball, rayOrigin.position, rayOrigin.rotation);
             ball.GetComponent<Rigidbody>().velocity = rayOrigin.up * velocity; 
 
-            RaycastHit hit;
-            if (Physics.Raycast(rayOrigin.position, rayOrigin.forward, out hit)) {
-                float distance = hit.distance;
-                Debug.DrawLine(rayOrigin.position, rayOrigin.position+rayOrigin.forward*hit.distance, Color.red);
-            }
-
         }
 
     }
+
+    
 }
