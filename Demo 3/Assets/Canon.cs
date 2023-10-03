@@ -6,7 +6,7 @@ public class Canon : MonoBehaviour
 {
     public Transform rayOrigin;
     public GameObject cannonball;
-    public float velocity = 15f;
+    public float velocity = 5f;
     // Start is called before the first frame update
     void Start()
     {

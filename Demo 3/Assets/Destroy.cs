@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-    float lifetime = 10; // lifetime of cannonballs
+    float lifetime = 8; // lifetime of cannonballs
     // Start is called before the first frame update
     void Start()
     {
