@@ -7,6 +7,14 @@ body {
     background-color: lavender;
 }
 
-.hr1 {
+hr {
    border-top: 1px solid black; 
+}
+
+.demo {
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
 }
