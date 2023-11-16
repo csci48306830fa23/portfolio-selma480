@@ -6,7 +6,8 @@ public class Gun : MonoBehaviour
 {
 
     public GameObject bullet;
-    public GameObject shootPoint;
+    public Transform shootPoint;
+    private float force = 20f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +18,12 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void fire() {
-        Instantiate(bullet, shootPoint.transform.position, Quaternion.identity);
+        var bulletInstance = Instantiate(bullet, shootPoint.transform.position, Quaternion.identity);
+        bulletInstance.GetComponent<Rigidbody>().velocity = shootPoint.forward * force;
     }
+
 }
